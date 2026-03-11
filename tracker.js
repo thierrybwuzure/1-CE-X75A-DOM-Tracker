@@ -1,14 +1,14 @@
-let btn1 = document.getElementById('btn_count1');
+let btn_sun = document.getElementById('btn-sun');
+let cnt = document.getElementById('sun-value');
 let btn5 = document.getElementById('btn_count5');
-let cnt = document.getElementById('val_count');
+let total = document.getElementById('val_total');
 
-
-btn1.addEventListener('click', () => {
+btn_sun.addEventListener('click', () => {
     cnt.innerText = parseInt(cnt.innerText) + 1;
 });
 
-btn5.addEventListener('click', () => {
-    cnt.innerText = parseInt(cnt.innerText) + 5;
-});
+// btn.addEventListener('click', () => {
+//     cnt.innerText = parseInt(cnt.innerText) + 5;
+// });
 
-console.log(btn1, btn5);
+console.log(btn_sun);
