@@ -25,4 +25,11 @@ btn_break.addEventListener('click', () => {
     cnt4.innerText = parseInt(cnt4.innerText) + 1;
 });
 
+btn_reset.addEventListener('click', () => {
+    cnt1.innerText = 0;
+    cnt2.innerText = 0;
+    cnt3.innerText = 0;
+    cnt4.innerText = 0;
+})
+
 console.log(btn_sun, btn_water, btn_break, goal_message);
