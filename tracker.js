@@ -7,22 +7,41 @@ let cnt2 = document.getElementById('water-value');
 let btn_break = document.getElementById('btn-break');
 let cnt3 = document.getElementById('break-value');
 
-let goal_message = document.getElementById('goal-message');
+let btn_reset = document.getElementById('btn-reset');
 let cnt4 = document.getElementById('total-value');
 
 btn_sun.addEventListener('click', () => {
-    cnt1.innerText = parseInt(cnt1.innerText) + 1;
-    cnt4.innerText = parseInt(cnt4.innerText) + 1;
+
+    if (parseInt(cnt1.innerText) < 10) {
+        cnt1.innerText = parseInt(cnt1.innerText) + 1;
+        cnt4.innerText = parseInt(cnt4.innerText) + 1;
+    }
+    else {
+        btn_sun.disabled = true;
+    }
 });
 
 btn_water.addEventListener('click', () => {
-    cnt2.innerText = parseInt(cnt2.innerText) + 1;
-    cnt4.innerText = parseInt(cnt4.innerText) + 1;
-});
+
+    if (parseInt(cnt2.innerText) < 14) {
+        cnt2.innerText = parseInt(cnt2.innerText) + 1;
+        cnt4.innerText = parseInt(cnt4.innerText) + 1;
+    }
+
+    else {
+        btn_water.disabled = true;
+    };
+})
 
 btn_break.addEventListener('click', () => {
-    cnt3.innerText = parseInt(cnt3.innerText) + 1;
-    cnt4.innerText = parseInt(cnt4.innerText) + 1;
+
+    if (parseInt(cnt3.innerText) < 16) {
+        cnt3.innerText = parseInt(cnt3.innerText) + 1;
+        cnt4.innerText = parseInt(cnt4.innerText) + 1;
+    }
+    else {
+        btn_break.disabled = true;
+    }
 });
 
 btn_reset.addEventListener('click', () => {
@@ -32,4 +51,4 @@ btn_reset.addEventListener('click', () => {
     cnt4.innerText = 0;
 })
 
-console.log(btn_sun, btn_water, btn_break, goal_message);
+console.log(btn_sun, btn_water, btn_break, btn_reset);
